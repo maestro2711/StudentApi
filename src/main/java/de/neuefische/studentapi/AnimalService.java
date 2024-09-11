@@ -17,7 +17,7 @@ public class AnimalService {
     }
 
     public Animal saveAnimal(Animal animal){
-        Animal newAnimal = new Animal(UUID.randomUUID().toString(),animal.name(),animal.age(),300);
+        Animal newAnimal = new Animal(UUID.randomUUID().toString(),animal.name(),animal.age(),animal.purchasePrice());
         return animalRepository.save(newAnimal);
     }
 }
